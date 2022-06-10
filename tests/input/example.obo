@@ -1,0 +1,56 @@
+[Term]
+id: MONDO:0800075
+name: dysostosis with predominant vertebral with and without costal involvement
+def: "Any dysostosis that involves the vertebrae, with or without involvement of the the ribs or the upper sides of the body." [https://orcid.org/0000-0001-5208-3432]
+xref: Orphanet:93454 {source="MONDO:relatedTo"}
+is_a: MONDO:0018230 {source="PMID:31633310"} ! skeletal dysplasia
+is_a: MONDO:0018234 {source="PMID:31633310"} ! dysostosis
+relationship: seeAlso https://github.com/monarch-initiative/mondo/issues/4948
+
+[Term]
+id: MONDO:0008305
+name: Currarino triad
+def: "Currarino syndrome (CS) is a rare congenital disease characterized by the triad of anorectal malformations (ARMs) (usually anal stenosis), presacral mass (commonly anterior sacral meningocele (ASM) or teratoma) and sacral anomalies (i.e. total or partial agenesis of the sacrum and coccyx or deformity of the sacral vertebrae)." [Orphanet:1552]
+subset: ordo_malformation_syndrome {source="Orphanet:1552"}
+synonym: "CURRARINO syndrome" RELATED [OMIM:176450]
+synonym: "Currarino syndrome" EXACT [Orphanet:1552]
+synonym: "Currarino triad" EXACT CLINGEN_PREFERRED [OMIM:176450]
+synonym: "partial sacral agenesis with intact first sacral vertebra, presacral mass and anorectal malformation" RELATED [GARD:0001626]
+synonym: "sacral agenesis syndrome" RELATED [OMIM:176450]
+synonym: "sacral agenesis, hereditary, with presacral Mass, anterior meningocele, and/or teratoma, and anorectal malformation" RELATED [OMIM:176450]
+synonym: "Scra1" RELATED [OMIM:176450]
+xref: DOID:0111546 {source="MONDO:equivalentTo"}
+xref: GARD:0001626 {source="MONDO:Orphanet-shared", source="MONDO:equivalentTo", source="MONDO:OMIM-shared"}
+xref: ICD10CM:Q87.8 {source="Orphanet:1552", source="Orphanet:1552/attributed", source="Orphanet:1552/ntbt"}
+xref: ICD9:759.89 {source="MONDO:relatedTo", source="MONDO:i2s"}
+xref: MESH:C536221 {source="Orphanet:1552", source="MONDO:equivalentTo", source="Orphanet:1552/e"}
+xref: OMIM:176450 {source="Orphanet:1552", source="MONDO:equivalentTo", source="Orphanet:1552/e"}
+xref: Orphanet:1552 {source="MONDO:equivalentTo", source="OMIM:176450"}
+xref: SCTID:413936007 {source="MONDO:equivalentTo"}
+xref: UMLS:C1415596 {source="MONDO:notFoundInDiseaseSubset", source="OMIM:176450"}
+xref: UMLS:C1531773 {source="Orphanet:1552", source="MONDO:equivalentTo", source="MONDO:ncbi_mim2gene_medline", source="OMIM:176450", source="Orphanet:1552/e"}
+xref: UMLS:C1867774 {source="OMIM:176450"}
+xref: UMLS:C1867775 {source="MONDO:notFoundInDiseaseSubset", source="OMIM:176450"}
+is_a: MONDO:0015246 {source="Orphanet:1552"} ! syndromic anorectal malformation
+is_a: MONDO:0015846 {source="Orphanet:1552"} ! syndromic uterovaginal malformation
+is_a: MONDO:0018454 {source="MONDO:0019711-obsoleted", source="https://github.com/monarch-initiative/mondo/pull/2571/"} ! dysostosis of genetic origin
+is_a: MONDO:0800075 {source="PMID:31633310"} ! dysostosis with predominant vertebral with and without costal involvement
+relationship: has_material_basis_in_germline_mutation_in http://identifiers.org/hgnc/4979 {source="MONDO:mim2gene_medgen"} ! MNX1
+relationship: seeAlso https://github.com/monarch-initiative/mondo/issues/4948
+property_value: confidence "0.12499999999999978" xsd:double
+
+[Term]
+id: MONDO:0016186
+name: qualitative or quantitative defects of myofibrillar proteins
+subset: disease_grouping
+subset: ordo_group_of_disorders {source="Orphanet:209038"}
+xref: Orphanet:209038 {source="MONDO:equivalentTo"}
+is_a: MONDO:0016139 {source="Orphanet:209038"} ! qualitative or quantitative protein defects in neuromuscular diseases
+
+[Term]
+id: MONDO:0016190
+name: qualitative or quantitative defects of protein ZASP
+subset: disease_grouping
+subset: ordo_group_of_disorders {source="Orphanet:209050"}
+xref: Orphanet:209050 {source="MONDO:equivalentTo"}
+is_a: MONDO:0016186 {source="Orphanet:209050"} ! qualitative or quantitative defects of myofibrillar proteins

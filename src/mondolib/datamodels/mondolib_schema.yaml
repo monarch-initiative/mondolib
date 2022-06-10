@@ -1,0 +1,71 @@
+id: https://purl.obolibrary.org/obo/mondo/schema
+name: mondolib_schema
+description: A schema that is used by mondolib, primarily for bespoke Mondo QC
+
+prefixes:
+  linkml: https://w3id.org/linkml/
+  mondolib: https://purl.obolibrary.org/obo/mondo/schema/
+
+default_prefix: mondolib
+default_range: string
+imports:
+  - linkml:types
+
+classes:
+
+  LexicalPattern:
+    description: A lexical pattern that is matched against labels
+    attributes:
+      pattern:
+      description:
+      obsoletion_reason:
+      scope:
+        description: Lexical matches are only applied in certain scopes
+        range: ValidationCheckScope
+
+  Configuration:
+    attributes:
+      lexical_patterns:
+        range: LexicalPattern
+        multivalued: true
+      exclude_terms_with_definitions:
+        range: boolean
+
+  CandidateObsoletion:
+    attributes:
+      term:
+        identifier: true
+      label:
+      confidence:
+        range: float
+      is_ordo_only:
+        range: boolean
+      lexical_pattern_matches:
+        range: LexicalPattern
+        multivalued: true
+      direct_child_terms:
+        multivalued: true
+      is_likely_grouping:
+        range: boolean
+      has_definition:
+        range: boolean
+
+  Report:
+    description: >-
+      A pan-ontology report. This focuses on bespoke Mondo checks rather than generic OBO checks
+    attributes:
+      candidate_obsoletions:
+        range: CandidateObsoletion
+        multivalued: true
+        inlined: true
+
+enums:
+
+  ValidationCheckScope:
+    description: >-
+      Some validations are only performed in particular contexts or scopes
+    permissible_values:
+      ORDO_ONLY:
+        description: >-
+          A scope in which the term is mapped solely to Ordo/Orphanet, and there are no mappings to other ontologies,
+          and there have been no non-ORDO axioms added

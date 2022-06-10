@@ -1,0 +1,9 @@
+lexical_patterns:
+  - scope: ORDO_ONLY
+    pattern: "^genetic "
+    obsoletion_reason: Dividing this disease into generic and non-genetic forms
+    description: |-
+      subdividing diseases into genetic and non-genetic forms can be hard to maintain
+  - scope: ORDO_ONLY
+    pattern: ".* with .*"
+    obsoletion_reason: Conjunctive groupings are best represented in annotations

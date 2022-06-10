@@ -1,0 +1,1 @@
+ORPHANET_PREFIX = 'Orphanet'
