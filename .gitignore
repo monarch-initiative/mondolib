@@ -1,4 +1,4 @@
 .idea/
 .template.db
 tests/input/example-relation-graph.tsv.gz
-.vscode/settings.json
+.vscode/*
