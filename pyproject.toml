@@ -4,6 +4,7 @@ version = "0.0.0"
 description = "mondolib"
 authors = [
     "Chris Mungall <cjm@berkeleybop.org>",
+    "Nicolas Matentzoglu <nicolas.matentzoglu@gmail.com>",
     "Harshad Hegde <hhegde@lbl.gov>"
     ]
 license = "MIT"

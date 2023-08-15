@@ -11,8 +11,8 @@ from mondolib import __version__
 # https://www.sphinx-doc.org/en/master/usage/configuration.html#project-information
 
 project = 'mondolib'
-copyright = f"{date.today().year}, Harshad Hegde <hhegde@lbl.gov>"
-author = 'Harshad Hegde <hhegde@lbl.gov>'
+copyright = f"{date.today().year}, Chris Mungall <cjm@berkeleybop.org>"
+author = 'Chris Mungall <cjm@berkeleybop.org>'
 release = __version__
 
 # -- General configuration ---------------------------------------------------
