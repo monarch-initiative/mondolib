@@ -127,3 +127,10 @@ dmypy.json
 
 # Pyre type checker
 .pyre/
+
+# User-defined
+.idea/
+.template.db
+tests/input/example-relation-graph.tsv.gz
+.vscode/*
+**/__pycache__/**
