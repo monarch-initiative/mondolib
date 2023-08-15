@@ -1,0 +1,10 @@
+mondolib.config package
+=======================
+
+Module contents
+---------------
+
+.. automodule:: mondolib.config
+   :members:
+   :undoc-members:
+   :show-inheritance:

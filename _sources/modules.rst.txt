@@ -1,0 +1,7 @@
+mondolib
+========
+
+.. toctree::
+   :maxdepth: 4
+
+   mondolib

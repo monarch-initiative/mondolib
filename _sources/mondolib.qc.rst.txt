@@ -1,0 +1,21 @@
+mondolib.qc package
+===================
+
+Submodules
+----------
+
+mondolib.qc.term\_validator module
+----------------------------------
+
+.. automodule:: mondolib.qc.term_validator
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: mondolib.qc
+   :members:
+   :undoc-members:
+   :show-inheritance:

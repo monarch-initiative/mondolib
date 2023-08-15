@@ -1,0 +1,21 @@
+mondolib.utilities package
+==========================
+
+Submodules
+----------
+
+mondolib.utilities.curie\_utilities module
+------------------------------------------
+
+.. automodule:: mondolib.utilities.curie_utilities
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: mondolib.utilities
+   :members:
+   :undoc-members:
+   :show-inheritance:

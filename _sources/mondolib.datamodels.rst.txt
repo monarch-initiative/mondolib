@@ -1,0 +1,29 @@
+mondolib.datamodels package
+===========================
+
+Submodules
+----------
+
+mondolib.datamodels.mondolib\_schema module
+-------------------------------------------
+
+.. automodule:: mondolib.datamodels.mondolib_schema
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+mondolib.datamodels.vocabulary module
+-------------------------------------
+
+.. automodule:: mondolib.datamodels.vocabulary
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: mondolib.datamodels
+   :members:
+   :undoc-members:
+   :show-inheritance:

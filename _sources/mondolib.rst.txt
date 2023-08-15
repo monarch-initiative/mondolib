@@ -1,0 +1,40 @@
+mondolib package
+================
+
+Subpackages
+-----------
+
+.. toctree::
+   :maxdepth: 4
+
+   mondolib.config
+   mondolib.datamodels
+   mondolib.qc
+   mondolib.utilities
+
+Submodules
+----------
+
+mondolib.cli module
+-------------------
+
+.. automodule:: mondolib.cli
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+mondolib.main module
+--------------------
+
+.. automodule:: mondolib.main
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
+Module contents
+---------------
+
+.. automodule:: mondolib
+   :members:
+   :undoc-members:
+   :show-inheritance:
