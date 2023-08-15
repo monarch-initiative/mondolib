@@ -1,1 +1,2 @@
-ORPHANET_PREFIX = 'Orphanet'
+"""mondolib datamodel vocabularies."""
+ORPHANET_PREFIX = "Orphanet"

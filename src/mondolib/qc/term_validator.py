@@ -1,36 +1,35 @@
+"""mondolib term-validator."""
 import logging
 import os
+import re
+import sys
 from collections import defaultdict
 from dataclasses import dataclass
 from pathlib import Path
 from typing import Dict, Optional
-import re
-import sys
 
 from linkml_runtime.loaders import yaml_loader
-from mondolib.datamodels.vocabulary import ORPHANET_PREFIX
-from mondolib.utilities.curie_utilities import get_curie_prefix
-from mondolib.datamodels.mondolib_schema import Configuration, ValidationCheckScope, Report, CandidateObsoletion
 from oaklib import BasicOntologyInterface
-from oaklib.datamodels.oxo import ScopeEnum
-from oaklib.interfaces.obograph_interface import OboGraphInterface
 from oaklib.types import CURIE
 
+from mondolib.datamodels.mondolib_schema import CandidateObsoletion, Configuration, Report, ValidationCheckScope
+from mondolib.datamodels.vocabulary import ORPHANET_PREFIX
+from mondolib.utilities.curie_utilities import get_curie_prefix
 
 MAPPING_DICT_BY_SOURCE = Dict[str, str]
 
 
 @dataclass
 class TermValidator:
-    """
-    A bespoke Mondo validator
-    """
+
+    """A bespoke Mondo validator."""
+
     ontology: BasicOntologyInterface = None
     configuration: Configuration = None
 
     def get_ontology_report(self, threshold: float = 0.0) -> Report:
         """
-        Gets a report from the entire ontology
+        Get report from the entire ontology.
 
         :return:
         """
@@ -41,7 +40,6 @@ class TermValidator:
                 report.candidate_obsoletions[obs.term] = obs
         return report
 
-
     def get_candidate_obsoletion(self, term: CURIE, threshold: float = 0.0) -> Optional[CandidateObsoletion]:
         """
         Given a term, yield the reasons why this should be obsoleted.
@@ -51,16 +49,16 @@ class TermValidator:
         :param term:
         :return:
         """
-        logging.info(f'Checking {term}')
+        logging.info(f"Checking {term}")
         oi = self.ontology
         conf = self.configuration
         confidence = 0.0
         label = oi.get_label_by_curie(term)
         if label is None:
-            logging.info(f'No name - possible dangling? {term}')
+            logging.info(f"No name - possible dangling? {term}")
             return None
         obs = CandidateObsoletion(term=term, label=label)
-        incoming = oi.get_incoming_relationships_by_curie(term)
+        incoming = oi.get_incoming_relationship_map_by_curie(term)
         mdict = self.get_mappings_by_source(term)
         prefixes = list(mdict.keys())
 
@@ -89,23 +87,23 @@ class TermValidator:
 
     def load_configuration(self, path: str = None) -> None:
         """
-        Loads the configuration
+        Load configuration.
 
         :param path: uses default if not specified
         :return:
         """
         if path is None:
             d = Path(os.path.dirname(sys.modules["mondolib"].__file__))
-            path = d / 'config' / 'qc_config.yaml'
-        logging.info(f'Loading from {path}')
+            path = d / "config" / "qc_config.yaml"
+        logging.info(f"Loading from {path}")
         self.configuration = yaml_loader.loads(str(path), Configuration)
 
     def get_mappings_by_source(self, term: CURIE) -> MAPPING_DICT_BY_SOURCE:
+        """Get CURIE mappings."""
         oi = self.ontology
         mapping_dict = defaultdict(list)
-        for m in oi.get_simple_mappings_by_curie(term):
+        for m in oi.simple_mappings_by_curie(term):
             # ignore mapping predicate for now
             x = m[1]
             mapping_dict[get_curie_prefix(x)].append(x)
         return mapping_dict
-
