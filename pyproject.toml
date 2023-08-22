@@ -8,6 +8,7 @@ authors = ["cmungall <cjm@berkeleybop.org>"]
 python = "^3.9"
 oaklib = "^0.1.20"
 oakx-robot = "^0.1.0"
+pydantic = "1.10.12"
 
 [tool.poetry.group.docs]
 optional = true
