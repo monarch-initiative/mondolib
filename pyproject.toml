@@ -9,10 +9,6 @@ python = "^3.9"
 oaklib = "^0.1.20"
 oakx-robot = "^0.1.0"
 
-<<<<<<< Updated upstream
-[tool.poetry.dev-dependencies]
-pytest = "^5.2"
-=======
 [tool.poetry.group.docs]
 optional = true
 
@@ -71,7 +67,6 @@ skip = "*.po,*.ts,.git,pyproject.toml"
 count = ""
 quiet-level = 3
 # ignore-words-list = ""
->>>>>>> Stashed changes
 
 [build-system]
 requires = ["poetry-core>=1.0.0"]
