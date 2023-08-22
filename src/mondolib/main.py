@@ -7,7 +7,7 @@ def demo():
 
 
 def validate(input: str):
-    """Validate using oaklib."""
+    """Validate."""
     print(input)
 
 
