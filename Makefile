@@ -15,7 +15,7 @@ test_inputs: tests/input/example.db
 tests/input/%.db: tests/input/%.owl
 	$(RUN) semsql make --docker $@
 
-# *========================
+# *======|=|=||================
 tmp/mondo_edit.obo:
 	wget -O tmp/mondo_edit.obo https://raw.githubusercontent.com/monarch-initiative/mondo/master/src/ontology/mondo-edit.obo 
 
