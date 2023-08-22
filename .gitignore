@@ -135,3 +135,4 @@ tests/input/example-relation-graph.tsv.gz
 .vscode/*
 **/__pycache__/**
 tmp/*
+!tmp/.keep
