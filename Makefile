@@ -34,3 +34,5 @@ tmp/mondo_validate.tsv: tmp/mondo.db
 
 lexmatch: tmp/mondo_lexmatch.sssom.tsv
 validate: tmp/mondo_validate.tsv
+clear-tmp:
+	rm -rf tmp/*
