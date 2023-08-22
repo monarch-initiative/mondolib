@@ -4,7 +4,7 @@ import logging
 import click
 
 from mondolib import __version__
-from mondolib.main import demo
+from mondolib.main import validate
 
 __all__ = [
     "main",
@@ -34,10 +34,11 @@ def main(verbose: int, quiet: bool):
         logger.setLevel(level=logging.ERROR)
 
 
-@main.command()
-def run():
+@main.command("validate")
+@click.argument("input")
+def click_validate(input: str):
     """Run the mondolib's demo command."""
-    demo()
+    validate(input)
 
 
 if __name__ == "__main__":

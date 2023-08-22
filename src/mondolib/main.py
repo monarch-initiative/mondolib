@@ -6,9 +6,9 @@ def demo():
     print("Hello, World!")
 
 
-def validate():
+def validate(input: str):
     """Validate using oaklib."""
-    pass
+    print(input)
 
 
 def update():
