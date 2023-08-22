@@ -136,3 +136,4 @@ tests/input/example-relation-graph.tsv.gz
 **/__pycache__/**
 tmp/*
 !tmp/.keep
+!tmp/mondo_validate.tsv
