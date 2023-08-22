@@ -7,10 +7,12 @@ def demo():
 
 
 def validate():
+    """Validate using oaklib."""
     pass
 
 
 def update():
+    """Update ontology file."""
     pass
 
 
