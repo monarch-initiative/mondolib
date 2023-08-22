@@ -15,12 +15,12 @@ subset: ordo_malformation_syndrome {source="Orphanet:1552"}
 synonym: "CURRARINO syndrome" RELATED [OMIM:176450]
 synonym: "Currarino syndrome" EXACT [Orphanet:1552]
 synonym: "Currarino triad" EXACT CLINGEN_PREFERRED [OMIM:176450]
-synonym: "partial sacral agenesis with intact first sacral vertebra, presacral mass and anorectal malformation" RELATED [GARD:0001626]
+synonym: "partial sacral agenesis with intact first sacral vertebra, presacral mass and anorectal malformation" RELATED [GUARD:0001626]
 synonym: "sacral agenesis syndrome" RELATED [OMIM:176450]
 synonym: "sacral agenesis, hereditary, with presacral Mass, anterior meningocele, and/or teratoma, and anorectal malformation" RELATED [OMIM:176450]
 synonym: "Scra1" RELATED [OMIM:176450]
 xref: DOID:0111546 {source="MONDO:equivalentTo"}
-xref: GARD:0001626 {source="MONDO:Orphanet-shared", source="MONDO:equivalentTo", source="MONDO:OMIM-shared"}
+xref: GUARD:0001626 {source="MONDO:Orphanet-shared", source="MONDO:equivalentTo", source="MONDO:OMIM-shared"}
 xref: ICD10CM:Q87.8 {source="Orphanet:1552", source="Orphanet:1552/attributed", source="Orphanet:1552/ntbt"}
 xref: ICD9:759.89 {source="MONDO:relatedTo", source="MONDO:i2s"}
 xref: MESH:C536221 {source="Orphanet:1552", source="MONDO:equivalentTo", source="Orphanet:1552/e"}
