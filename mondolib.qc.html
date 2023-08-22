@@ -4,18 +4,18 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mondolib.qc package &mdash; mondolib 0.0.0 documentation</title>
+  <title>mondolib.qc package &mdash; mondolib 0.1.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=01f34227"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -54,9 +54,9 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="mondolib.html#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mondolib.html#module-mondolib.cli">mondolib.cli module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mondolib.html#module-mondolib.main">mondolib.main module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="mondolib.html#module-mondolib">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mondolib.html#mondolib-cli-module">mondolib.cli module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mondolib.html#mondolib-main-module">mondolib.main module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="mondolib.html#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -90,94 +90,16 @@
            <div itemprop="articleBody">
              
   <section id="mondolib-qc-package">
-<h1>mondolib.qc package<a class="headerlink" href="#mondolib-qc-package" title="Permalink to this heading"></a></h1>
+<h1>mondolib.qc package<a class="headerlink" href="#mondolib-qc-package" title="Link to this heading"></a></h1>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="module-mondolib.qc.term_validator">
-<span id="mondolib-qc-term-validator-module"></span><h2>mondolib.qc.term_validator module<a class="headerlink" href="#module-mondolib.qc.term_validator" title="Permalink to this heading"></a></h2>
-<p>mondolib term-validator.</p>
-<dl class="py class">
-<dt class="sig sig-object py" id="mondolib.qc.term_validator.TermValidator">
-<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">mondolib.qc.term_validator.</span></span><span class="sig-name descname"><span class="pre">TermValidator</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">ontology</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">configuration</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mondolib.qc.term_validator.TermValidator" title="Permalink to this definition"></a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
-<p>A bespoke Mondo validator.</p>
-<dl class="py attribute">
-<dt class="sig sig-object py" id="mondolib.qc.term_validator.TermValidator.configuration">
-<span class="sig-name descname"><span class="pre">configuration</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><a class="reference internal" href="mondolib.datamodels.html#mondolib.datamodels.mondolib_schema.Configuration" title="mondolib.datamodels.mondolib_schema.Configuration"><code class="xref py py-class docutils literal notranslate"><span class="pre">Configuration</span></code></a></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#mondolib.qc.term_validator.TermValidator.configuration" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mondolib.qc.term_validator.TermValidator.get_candidate_obsoletion">
-<span class="sig-name descname"><span class="pre">get_candidate_obsoletion</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">term</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mondolib.qc.term_validator.TermValidator.get_candidate_obsoletion" title="Permalink to this definition"></a></dt>
-<dd><p>Given a term, yield the reasons why this should be obsoleted.</p>
-<p>If there are no detectable reasons, return None</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>term</strong> (<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>) – </p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<a class="reference internal" href="mondolib.datamodels.html#mondolib.datamodels.mondolib_schema.CandidateObsoletion" title="mondolib.datamodels.mondolib_schema.CandidateObsoletion"><code class="xref py py-class docutils literal notranslate"><span class="pre">CandidateObsoletion</span></code></a>]</p>
-</dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mondolib.qc.term_validator.TermValidator.get_mappings_by_source">
-<span class="sig-name descname"><span class="pre">get_mappings_by_source</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">term</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mondolib.qc.term_validator.TermValidator.get_mappings_by_source" title="Permalink to this definition"></a></dt>
-<dd><p>Get CURIE mappings.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">Dict</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>, <code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]</p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mondolib.qc.term_validator.TermValidator.get_ontology_report">
-<span class="sig-name descname"><span class="pre">get_ontology_report</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">threshold</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">0.0</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mondolib.qc.term_validator.TermValidator.get_ontology_report" title="Permalink to this definition"></a></dt>
-<dd><p>Get report from the entire ontology.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Return type<span class="colon">:</span></dt>
-<dd class="field-odd"><p><a class="reference internal" href="mondolib.datamodels.html#mondolib.datamodels.mondolib_schema.Report" title="mondolib.datamodels.mondolib_schema.Report"><code class="xref py py-class docutils literal notranslate"><span class="pre">Report</span></code></a></p>
-</dd>
-<dt class="field-even">Returns<span class="colon">:</span></dt>
-<dd class="field-even"><p></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py method">
-<dt class="sig sig-object py" id="mondolib.qc.term_validator.TermValidator.load_configuration">
-<span class="sig-name descname"><span class="pre">load_configuration</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">path</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mondolib.qc.term_validator.TermValidator.load_configuration" title="Permalink to this definition"></a></dt>
-<dd><p>Load configuration.</p>
-<dl class="field-list simple">
-<dt class="field-odd">Parameters<span class="colon">:</span></dt>
-<dd class="field-odd"><p><strong>path</strong> (<code class="xref py py-data docutils literal notranslate"><span class="pre">Optional</span></code>[<code class="xref py py-class docutils literal notranslate"><span class="pre">str</span></code>]) – uses default if not specified</p>
-</dd>
-<dt class="field-even">Return type<span class="colon">:</span></dt>
-<dd class="field-even"><p><code class="xref py py-obj docutils literal notranslate"><span class="pre">None</span></code></p>
-</dd>
-<dt class="field-odd">Returns<span class="colon">:</span></dt>
-<dd class="field-odd"><p></p>
-</dd>
-</dl>
-</dd></dl>
-
-<dl class="py attribute">
-<dt class="sig sig-object py" id="mondolib.qc.term_validator.TermValidator.ontology">
-<span class="sig-name descname"><span class="pre">ontology</span></span><em class="property"><span class="p"><span class="pre">:</span></span><span class="w"> </span><code class="xref py py-class docutils literal notranslate"><span class="pre">BasicOntologyInterface</span></code></em><em class="property"><span class="w"> </span><span class="p"><span class="pre">=</span></span><span class="w"> </span><span class="pre">None</span></em><a class="headerlink" href="#mondolib.qc.term_validator.TermValidator.ontology" title="Permalink to this definition"></a></dt>
-<dd></dd></dl>
-
-</dd></dl>
-
+<section id="mondolib-qc-term-validator-module">
+<h2>mondolib.qc.term_validator module<a class="headerlink" href="#mondolib-qc-term-validator-module" title="Link to this heading"></a></h2>
 </section>
-<section id="module-mondolib.qc">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-mondolib.qc" title="Permalink to this heading"></a></h2>
-<p>mondolib quality check.</p>
+<section id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<p id="module-mondolib.qc">mondolib quality check.</p>
 </section>
 </section>
 

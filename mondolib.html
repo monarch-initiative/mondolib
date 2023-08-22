@@ -4,18 +4,18 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>mondolib package &mdash; mondolib 0.0.0 documentation</title>
+  <title>mondolib package &mdash; mondolib 0.1.0 documentation</title>
       <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
   <!--[if lt IE 9]>
     <script src="_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-        <script src="_static/jquery.js"></script>
-        <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
-        <script src="_static/doctools.js"></script>
-        <script src="_static/sphinx_highlight.js"></script>
+        <script src="_static/jquery.js?v=5d32c60e"></script>
+        <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+        <script src="_static/documentation_options.js?v=01f34227"></script>
+        <script src="_static/doctools.js?v=888ff710"></script>
+        <script src="_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
@@ -54,12 +54,14 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-mondolib.cli">mondolib.cli module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-mondolib.main">mondolib.main module</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#mondolib-cli-module">mondolib.cli module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mondolib-main-module">mondolib.main module</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#mondolib.main.demo"><code class="docutils literal notranslate"><span class="pre">demo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mondolib.main.update"><code class="docutils literal notranslate"><span class="pre">update()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mondolib.main.validate"><code class="docutils literal notranslate"><span class="pre">validate()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#module-mondolib">Module contents</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -92,18 +94,18 @@
            <div itemprop="articleBody">
              
   <section id="mondolib-package">
-<h1>mondolib package<a class="headerlink" href="#mondolib-package" title="Permalink to this heading"></a></h1>
+<h1>mondolib package<a class="headerlink" href="#mondolib-package" title="Link to this heading"></a></h1>
 <section id="subpackages">
-<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this heading"></a></h2>
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Link to this heading"></a></h2>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="mondolib.config.html">mondolib.config package</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="mondolib.config.html#module-mondolib.config">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mondolib.config.html#module-contents">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="mondolib.datamodels.html">mondolib.datamodels package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="mondolib.datamodels.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mondolib.datamodels.html#module-mondolib.datamodels.mondolib_schema">mondolib.datamodels.mondolib_schema module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mondolib.datamodels.html#mondolib-datamodels-mondolib-schema-module">mondolib.datamodels.mondolib_schema module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="mondolib.datamodels.html#mondolib.datamodels.mondolib_schema.CandidateObsoletion"><code class="docutils literal notranslate"><span class="pre">CandidateObsoletion</span></code></a><ul>
 <li class="toctree-l4"><a class="reference internal" href="mondolib.datamodels.html#mondolib.datamodels.mondolib_schema.CandidateObsoletion.class_class_curie"><code class="docutils literal notranslate"><span class="pre">CandidateObsoletion.class_class_curie</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="mondolib.datamodels.html#mondolib.datamodels.mondolib_schema.CandidateObsoletion.class_class_uri"><code class="docutils literal notranslate"><span class="pre">CandidateObsoletion.class_class_uri</span></code></a></li>
@@ -172,59 +174,58 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="mondolib.datamodels.html#module-mondolib.datamodels.vocabulary">mondolib.datamodels.vocabulary module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mondolib.datamodels.html#module-mondolib.datamodels">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mondolib.datamodels.html#mondolib-datamodels-vocabulary-module">mondolib.datamodels.vocabulary module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mondolib.datamodels.html#module-contents">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="mondolib.qc.html">mondolib.qc package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="mondolib.qc.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mondolib.qc.html#module-mondolib.qc.term_validator">mondolib.qc.term_validator module</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="mondolib.qc.html#mondolib.qc.term_validator.TermValidator"><code class="docutils literal notranslate"><span class="pre">TermValidator</span></code></a><ul>
-<li class="toctree-l4"><a class="reference internal" href="mondolib.qc.html#mondolib.qc.term_validator.TermValidator.configuration"><code class="docutils literal notranslate"><span class="pre">TermValidator.configuration</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="mondolib.qc.html#mondolib.qc.term_validator.TermValidator.get_candidate_obsoletion"><code class="docutils literal notranslate"><span class="pre">TermValidator.get_candidate_obsoletion()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="mondolib.qc.html#mondolib.qc.term_validator.TermValidator.get_mappings_by_source"><code class="docutils literal notranslate"><span class="pre">TermValidator.get_mappings_by_source()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="mondolib.qc.html#mondolib.qc.term_validator.TermValidator.get_ontology_report"><code class="docutils literal notranslate"><span class="pre">TermValidator.get_ontology_report()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="mondolib.qc.html#mondolib.qc.term_validator.TermValidator.load_configuration"><code class="docutils literal notranslate"><span class="pre">TermValidator.load_configuration()</span></code></a></li>
-<li class="toctree-l4"><a class="reference internal" href="mondolib.qc.html#mondolib.qc.term_validator.TermValidator.ontology"><code class="docutils literal notranslate"><span class="pre">TermValidator.ontology</span></code></a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="mondolib.qc.html#module-mondolib.qc">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mondolib.qc.html#mondolib-qc-term-validator-module">mondolib.qc.term_validator module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mondolib.qc.html#module-contents">Module contents</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="mondolib.utilities.html">mondolib.utilities package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="mondolib.utilities.html#submodules">Submodules</a></li>
-<li class="toctree-l2"><a class="reference internal" href="mondolib.utilities.html#module-mondolib.utilities.curie_utilities">mondolib.utilities.curie_utilities module</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="mondolib.utilities.html#mondolib-utilities-curie-utilities-module">mondolib.utilities.curie_utilities module</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="mondolib.utilities.html#mondolib.utilities.curie_utilities.get_curie_prefix"><code class="docutils literal notranslate"><span class="pre">get_curie_prefix()</span></code></a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="mondolib.utilities.html#module-mondolib.utilities">Module contents</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mondolib.utilities.html#module-contents">Module contents</a></li>
 </ul>
 </li>
 </ul>
 </div>
 </section>
 <section id="submodules">
-<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this heading"></a></h2>
+<h2>Submodules<a class="headerlink" href="#submodules" title="Link to this heading"></a></h2>
 </section>
-<section id="module-mondolib.cli">
-<span id="mondolib-cli-module"></span><h2>mondolib.cli module<a class="headerlink" href="#module-mondolib.cli" title="Permalink to this heading"></a></h2>
-<p>Command line interface for mondolib.</p>
+<section id="mondolib-cli-module">
+<h2>mondolib.cli module<a class="headerlink" href="#mondolib-cli-module" title="Link to this heading"></a></h2>
+<p id="module-mondolib.cli">Command line interface for mondolib.</p>
 </section>
-<section id="module-mondolib.main">
-<span id="mondolib-main-module"></span><h2>mondolib.main module<a class="headerlink" href="#module-mondolib.main" title="Permalink to this heading"></a></h2>
-<p>Main python file.</p>
+<section id="mondolib-main-module">
+<h2>mondolib.main module<a class="headerlink" href="#mondolib-main-module" title="Link to this heading"></a></h2>
+<p id="module-mondolib.main">Main python file.</p>
 <dl class="py function">
 <dt class="sig sig-object py" id="mondolib.main.demo">
-<span class="sig-prename descclassname"><span class="pre">mondolib.main.</span></span><span class="sig-name descname"><span class="pre">demo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mondolib.main.demo" title="Permalink to this definition"></a></dt>
+<span class="sig-prename descclassname"><span class="pre">mondolib.main.</span></span><span class="sig-name descname"><span class="pre">demo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mondolib.main.demo" title="Link to this definition"></a></dt>
 <dd><p>Define API.</p>
 </dd></dl>
 
+<dl class="py function">
+<dt class="sig sig-object py" id="mondolib.main.update">
+<span class="sig-prename descclassname"><span class="pre">mondolib.main.</span></span><span class="sig-name descname"><span class="pre">update</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mondolib.main.update" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mondolib.main.validate">
+<span class="sig-prename descclassname"><span class="pre">mondolib.main.</span></span><span class="sig-name descname"><span class="pre">validate</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mondolib.main.validate" title="Link to this definition"></a></dt>
+<dd></dd></dl>
+
 </section>
-<section id="module-mondolib">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-mondolib" title="Permalink to this heading"></a></h2>
-<p>mondolib package.</p>
+<section id="module-contents">
+<h2>Module contents<a class="headerlink" href="#module-contents" title="Link to this heading"></a></h2>
+<p id="module-mondolib">mondolib package.</p>
 </section>
 </section>
 
