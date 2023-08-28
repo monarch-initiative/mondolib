@@ -356,7 +356,7 @@ http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0000200	ERROR	None	obo:
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0000200	ERROR	None	obo:mondo#excluded_subClassOf	None	None	None	Unknown pred (obo:mondo#excluded_subClassOf) = MOP:0000508 None
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0000208	ERROR	None	obo:mondo#excluded_subClassOf	None	None	None	Unknown pred (obo:mondo#excluded_subClassOf) = MOP:0018320 None
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0000211	ERROR	None	ICEO:0000115	None	None	None	Unknown pred (ICEO:0000115) = None An adult-onset movement disorder characterized by bradykinesia, dysarthria and muscle rigidity.
-http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0000212	ERROR	None	ICEO:0000115	None	None	None	Unknown pred (ICEO:0000115) = None A hypercalcemia disease that occurs between 28 days to one year of life..
+http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0000212	ERROR	None	ICEO:0000115	None	None	None	Unknown pred (ICEO:0000115) = None A hypercalcemia disease that occurs between 28 days to one year of life.
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0000212	ERROR	None	ICEO:0000233	None	None	None	Unknown pred (ICEO:0000233) = None https://github.com/monarch-initiative/mondo/issues/2926
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0000212	ERROR	None	obo:mondo#excluded_subClassOf	None	None	None	Unknown pred (obo:mondo#excluded_subClassOf) = MOP:0019743 None
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0000218	ERROR	None	ICEO:0000231	None	None	None	Unknown pred (ICEO:0000231) = OMO:0001000 None
@@ -549,7 +549,7 @@ http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001147	ERROR	None	obo:
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001149	ERROR	None	ICEO:0000589	None	None	None	Unknown pred (ICEO:0000589) = None microcephaly (disease)
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001149	ERROR	None	obo:mondo#excluded_subClassOf	None	None	None	Unknown pred (obo:mondo#excluded_subClassOf) = MOP:0002320 None
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001150	ERROR	None	obo:mondo#excluded_subClassOf	None	None	None	Unknown pred (obo:mondo#excluded_subClassOf) = MOP:0005559 None
-http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001153	ERROR	None	ICEO:0006012	None	None	None	Unknown pred (ICEO:0006012) = None 2023-09-01
+http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001153	ERROR	None	ICEO:0000231	None	None	None	Unknown pred (ICEO:0000231) = OMO:0001000 None
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001156	ERROR	None	ICEO:0000589	None	None	None	Unknown pred (ICEO:0000589) = None borderline personality disorder (disease)
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001170	ERROR	None	obo:mondo#excluded_subClassOf	None	None	None	Unknown pred (obo:mondo#excluded_subClassOf) = MOP:0002602 None
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001175	ERROR	None	obo:mondo#excluded_subClassOf	None	None	None	Unknown pred (obo:mondo#excluded_subClassOf) = MOP:0004847 None
@@ -558,7 +558,6 @@ http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001271	ERROR	None	ICEO
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001303	ERROR	None	ICEO:0000589	None	None	None	Unknown pred (ICEO:0000589) = None abnormal pupillary function (disease)
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001306	ERROR	None	ICEO:0000231	None	None	None	Unknown pred (ICEO:0000231) = OMO:0001000 None
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001319	ERROR	None	obo:mondo#excluded_synonym	None	None	None	Unknown pred (obo:mondo#excluded_synonym) = None Lateral Wall of bladder
-http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001321	ERROR	None	ICEO:0000231	None	None	None	Unknown pred (ICEO:0000231) = OMO:0001000 None
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001321	ERROR	None	ICEO:0000589	None	None	None	Unknown pred (ICEO:0000589) = None scleral staphyloma (disease)
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001328	ERROR	None	obo:mondo#excluded_from_qc_check	None	None	None	Unknown pred (obo:mondo#excluded_from_qc_check) = obo:mondo/sparql/qc/general/qc-single-child.sparql None
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001338	ERROR	None	obo:mondo#excluded_from_qc_check	None	None	None	Unknown pred (obo:mondo#excluded_from_qc_check) = obo:mondo/sparql/qc/general/qc-single-child.sparql None
@@ -566,6 +565,7 @@ http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001342	ERROR	None	ICEO
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001583	ERROR	None	obo:mondo#confidence	None	None	None	Unknown pred (obo:mondo#confidence) = None 0.3333333333333335
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001595	ERROR	None	obo:mondo#confidence	None	None	None	Unknown pred (obo:mondo#confidence) = None 0.4999999999999998
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001676	ERROR	None	obo:mondo#confidence	None	None	None	Unknown pred (obo:mondo#confidence) = None 0.045454545454545414
+http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001693	ERROR	None	obo:mondo#excluded_from_qc_check	None	None	None	Unknown pred (obo:mondo#excluded_from_qc_check) = obo:mondo/sparql/qc/general/qc-single-child.sparql None
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001706	ERROR	None	obo:mondo#excluded_from_qc_check	None	None	None	Unknown pred (obo:mondo#excluded_from_qc_check) = obo:mondo/sparql/qc/general/qc-single-child.sparql None
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0001724	ERROR	None	obo:mondo#excluded_synonym	None	None	None	Unknown pred (obo:mondo#excluded_synonym) = None supraglottis
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0002009	ERROR	None	obo:mondo#confidence	None	None	None	Unknown pred (obo:mondo#confidence) = None 0.23106060606060574
@@ -680,9 +680,7 @@ http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0008438	ERROR	None	obo:
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0008731	ERROR	None	obo:mondo#excluded_from_qc_check	None	None	None	Unknown pred (obo:mondo#excluded_from_qc_check) = obo:mondo/sparql/qc/mondo/qc-omim-subsumption.sparql None
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0008807	ERROR	None	ICEO:0006012	None	None	None	Unknown pred (ICEO:0006012) = None 2023-10-01
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0008855	ERROR	None	obo:mondo#excluded_from_qc_check	None	None	None	Unknown pred (obo:mondo#excluded_from_qc_check) = MOP:0018814 None
-http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0008858	ERROR	None	obo:mondo#excluded_from_qc_check	None	None	None	Unknown pred (obo:mondo#excluded_from_qc_check) = obo:mondo/sparql/qc/general/qc-single-child.sparql None
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0010204	ERROR	None	ICEO:0006012	None	None	None	Unknown pred (ICEO:0006012) = None 2023-09-01
-http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0011380	ERROR	None	ICEO:0006012	None	None	None	Unknown pred (ICEO:0006012) = None 2023-09-01
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0011499	ERROR	None	ICEO:0006012	None	None	None	Unknown pred (ICEO:0006012) = None 2023-09-01
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0011940	ERROR	None	ICEO:0006012	None	None	None	Unknown pred (ICEO:0006012) = None 2022-10-01
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0013742	ERROR	None	ICEO:0006012	None	None	None	Unknown pred (ICEO:0006012) = None 2023-09-01
@@ -723,6 +721,8 @@ http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0015334	ERROR	None	ICEO
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0015337	ERROR	None	ICEO:0006012	None	None	None	Unknown pred (ICEO:0006012) = None 2023-10-01
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0015338	ERROR	None	ICEO:0006012	None	None	None	Unknown pred (ICEO:0006012) = None 2023-09-01
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0015359	ERROR	None	ICEO:0006012	None	None	None	Unknown pred (ICEO:0006012) = None 2023-09-01
+http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0015360	ERROR	None	ICEO:0006012	None	None	None	Unknown pred (ICEO:0006012) = None 2022-09-01
+http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0015361	ERROR	None	ICEO:0006012	None	None	None	Unknown pred (ICEO:0006012) = None 2023-09-01
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0015364	ERROR	None	obo:mondo#excluded_synonym	None	None	None	Unknown pred (obo:mondo#excluded_synonym) = None familial dysautonomia, type II
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0020066	ERROR	None	obo:mondo#excluded_synonym	None	None	None	Unknown pred (obo:mondo#excluded_synonym) = None Cutis hyperelastica
 http://www.w3.org/ns/shacl#ClosedConstraintComponent	MOP:0020066	ERROR	None	obo:mondo#excluded_synonym	None	None	None	Unknown pred (obo:mondo#excluded_synonym) = None India rubber skin

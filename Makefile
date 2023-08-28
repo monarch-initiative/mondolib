@@ -22,9 +22,10 @@ tmp/mondo_edit.obo:
 tmp/mondo.owl: tmp/mondo_edit.obo
 	robot convert -i $< --output $@
 
-tmp/mondo.db:
+tmp/mondo.db: tmp/mondo.owl
 	semsql make $@
-	rm .template.db
+	rm -f .template.db
+	rm -f tmp/mondo-relation-graph.tsv.gz
 
 tmp/mondo_lexmatch.sssom.tsv: tmp/mondo.db
 	runoak -i sqlite:$< lexmatch -o $@ -R $(RULES_FILE)
