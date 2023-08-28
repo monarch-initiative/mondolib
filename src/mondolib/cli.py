@@ -37,7 +37,7 @@ def main(verbose: int, quiet: bool):
 @main.command("validate")
 @click.argument("input")
 @click.option("-o", "--output", help="Output file path")
-def click_validate(input: str, output:str):
+def click_validate(input: str, output: str):
     """Run the mondolib's demo command."""
     validate(input, output)
 
