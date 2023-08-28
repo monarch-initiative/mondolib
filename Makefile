@@ -29,8 +29,11 @@ tmp/mondo.db:
 tmp/mondo_lexmatch.sssom.tsv: tmp/mondo.db
 	runoak -i sqlite:$< lexmatch -o $@ -R $(RULES_FILE)
 
-tmp/mondo_validate.tsv: tmp/mondo.db
+tmp/mondo_validate_full.tsv: tmp/mondo.db
 	runoak -i sqlite:$< validate -o $@
+
+tmp/mondo_validate.tsv: tmp/mondo_validate_full.tsv
+	mondoqc validate $< -o $@
 
 lexmatch: tmp/mondo_lexmatch.sssom.tsv
 validate: tmp/mondo_validate.tsv

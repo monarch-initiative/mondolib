@@ -1,4 +1,5 @@
 """Main python file."""
+import pandas as pd
 
 
 def demo():
@@ -6,9 +7,11 @@ def demo():
     print("Hello, World!")
 
 
-def validate(input: str):
+def validate(input: str, output: str):
     """Validate."""
-    print(input)
+    df = pd.read_csv(input, sep="\t", index_col=None)
+    mondo_df = df.loc[df["subject"].str.startswith("MONDO:")]
+    mondo_df.to_csv(output, sep="\t", index=False)
 
 
 def update():
