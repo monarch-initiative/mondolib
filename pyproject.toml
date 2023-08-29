@@ -2,7 +2,10 @@
 name = "mondolib"
 version = "0.1.0"
 description = ""
-authors = ["cmungall <cjm@berkeleybop.org>"]
+authors = [
+    "Chris Mungall <cjm@berkeleybop.org>",
+    "Harshad Hegde <hhegde@lbl.gov>"
+    ]
 
 [tool.poetry.dependencies]
 python = "^3.9"
