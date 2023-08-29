@@ -28,7 +28,7 @@ tmp/mondo.db: tmp/mondo.owl
 	rm -f tmp/mondo-relation-graph.tsv.gz
 
 tmp/mondo_lexmatch.sssom.tsv: tmp/mondo.db
-	$(RUN) runoak -i sqlite:$< lexmatch -o $@ -R $(RULES_FILE)
+	$(RUN) runoak -i sqlite:$< lexmatch -o $@ -R $(RULES_FILE) --ensure-strict-prefixes
 
 tmp/mondo_validate_full.tsv: tmp/mondo.db
 	$(RUN) runoak -i sqlite:$< validate -o $@
