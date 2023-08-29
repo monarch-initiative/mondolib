@@ -58,7 +58,7 @@ class TermValidator:
             logging.info(f"No name - possible dangling? {term}")
             return None
         obs = CandidateObsoletion(term=term, label=label)
-        incoming = oi.get_incoming_relationship_map_by_curie(term)
+        incoming = oi.incoming_relationship_map(term)
         mdict = self.get_mappings_by_source(term)
         prefixes = list(mdict.keys())
 
