@@ -6,9 +6,8 @@ authors = ["cmungall <cjm@berkeleybop.org>"]
 
 [tool.poetry.dependencies]
 python = "^3.9"
-oaklib = "^0.1.20"
-oakx-robot = "^0.1.0"
 pydantic = "1.10.12"
+oaklib = "^0.5.17"
 
 [tool.poetry.group.docs]
 optional = true
