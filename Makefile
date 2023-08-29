@@ -23,18 +23,18 @@ tmp/mondo.owl: tmp/mondo_edit.obo
 	robot convert -i $< --output $@
 
 tmp/mondo.db: tmp/mondo.owl
-	semsql make $@
+	$(RUN) semsql make $@
 	rm -f .template.db
 	rm -f tmp/mondo-relation-graph.tsv.gz
 
 tmp/mondo_lexmatch.sssom.tsv: tmp/mondo.db
-	runoak -i sqlite:$< lexmatch -o $@ -R $(RULES_FILE)
+	$(RUN) runoak -i sqlite:$< lexmatch -o $@ -R $(RULES_FILE)
 
 tmp/mondo_validate_full.tsv: tmp/mondo.db
-	runoak -i sqlite:$< validate -o $@
+	$(RUN) runoak -i sqlite:$< validate -o $@
 
 tmp/mondo_validate.tsv: tmp/mondo_validate_full.tsv
-	mondoqc validate $< -o $@
+	$(RUN) mondoqc validate $< -o $@
 
 lexmatch: tmp/mondo_lexmatch.sssom.tsv
 validate: tmp/mondo_validate.tsv
