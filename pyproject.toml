@@ -42,6 +42,7 @@ target-version = ["py38", "py39", "py310"]
 extend-ignore = [
     "D211",  # `no-blank-line-before-class`
     "D212",  # `multi-line-summary-first-line`
+    "B005",  # Using `.strip()` with multi-character strings is misleading the reader
     ]
 exclude = [
     "src/mondolib/datamodels/*"
