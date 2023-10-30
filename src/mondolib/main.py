@@ -40,7 +40,7 @@ def create_review_table(branch_id, branch_id_file, obsoletion_candidates_file, o
     Generate review table for branch obsoletion.
 
     :param branch_id: Branch CURIE.
-    :param branch_id_file: TSV file listing all beanch IDs.
+    :param branch_id_file: TSV file listing all branch IDs.
     :param obsoletion_candidates_file: TTSV listing all obsoletion candidate CURIEs
     :param output_file: output filepath.
     :param input: input  ontology resource (Path to local file or slug for oaklib).
