@@ -22,7 +22,13 @@ tmp/mondo_edit.obo:
 tmp/mondo.owl: tmp/mondo_edit.obo
 	robot convert -i $< --output $@
 
-tmp/mondo.db: tmp/mondo.owl
+tmp/mondo-relaxed-branchreview.owl: tmp/mondo_edit.obo
+	robot merge -i $< -i $< relax -o $@
+
+tmp/mondo-reasoned-branchreview.owl: tmp/mondo_edit.obo
+	robot merge -i $< -i $< reason -o $@
+
+tmp/mondo%.db: tmp/mondo%.owl
 	$(RUN) semsql make $@
 	rm -f .template.db
 	rm -f tmp/mondo-relation-graph.tsv.gz
@@ -36,7 +42,15 @@ tmp/mondo_validate_full.tsv: tmp/mondo.db
 tmp/mondo_validate.tsv: tmp/mondo_validate_full.tsv
 	$(RUN) mondoqc validate $< -o $@
 
+obsoletion_tables: tmp/mondo-relaxed-branchreview.db  tmp/mondo-reasoned-branchreview.db
+	for id in $(shell cat src/mondolib/branch_ids.tsv); do \
+        $(RUN) mondoqc create-review-table -i tmp/mondo-reasoned-branchreview.db -o tmp/mondo-reasoned-branch-$$id-review.tsv -f src/mondolib/obsoletion_terms.tsv -b $$id;\
+		$(RUN) mondoqc create-review-table -i tmp/mondo-relaxed-branchreview.db -o tmp/mondo-relaxed-branch-$$id-review.tsv -f src/mondolib/obsoletion_terms.tsv -b $$id;\
+		$(RUN) mondoqc relax-and-reason -i tmp/mondo-reasoned-branch-$$id-review.tsv -i tmp/mondo-relaxed-branch-$$id-review.tsv -r tmp/mondo-relaxed-branchreview.db   -f src/mondolib/obsoletion_terms.tsv -o reports/mondo-combined-branch-$$id-review.tsv;\
+    done
+
 lexmatch: tmp/mondo_lexmatch.sssom.tsv
 validate: tmp/mondo_validate.tsv
+
 clear-tmp:
 	rm -rf tmp/*
