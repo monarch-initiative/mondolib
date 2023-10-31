@@ -45,7 +45,7 @@ tmp/mondo_validate.tsv: tmp/mondo_validate_full.tsv
 obsoletion-tables: tmp/mondo-relaxed-branchreview.db  tmp/mondo-reasoned-branchreview.db
 	for id in $(shell cat src/mondolib/config/branch_ids.tsv); do \
         $(RUN) mondoqc create-review-table -i tmp/mondo-reasoned-branchreview.db -o tmp/mondo-reasoned-branch-$$id-review.tsv -f src/mondolib/config/obsoletion_terms.tsv -b $$id;\
-		$(RUN) mondoqc create-review-table -i tmp/mondo-relaxed-branchreview.db -o tmp/mondo-relaxed-branch-$$id-review.tsv -f src/mondolib/config/config/obsoletion_terms.tsv -b $$id;\
+		$(RUN) mondoqc create-review-table -i tmp/mondo-relaxed-branchreview.db -o tmp/mondo-relaxed-branch-$$id-review.tsv -f src/mondolib/config/obsoletion_terms.tsv -b $$id;\
 		$(RUN) mondoqc relax-and-reason -i tmp/mondo-reasoned-branch-$$id-review.tsv -i tmp/mondo-relaxed-branch-$$id-review.tsv -r tmp/mondo-relaxed-branchreview.db   -f src/mondolib/config/obsoletion_terms.tsv -o reports/mondo-combined-branch-$$id-review.tsv;\
     done
 
