@@ -55,8 +55,18 @@
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mondolib-cli-module">mondolib.cli module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#mondolib-constants-module">mondolib.constants module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#mondolib-main-module">mondolib.main module</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#mondolib.main.add_obsoleted_label"><code class="docutils literal notranslate"><span class="pre">add_obsoleted_label()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mondolib.main.add_status_and_update_parents"><code class="docutils literal notranslate"><span class="pre">add_status_and_update_parents()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mondolib.main.create_review_table"><code class="docutils literal notranslate"><span class="pre">create_review_table()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#mondolib.main.demo"><code class="docutils literal notranslate"><span class="pre">demo()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mondolib.main.get_columns_as_sets"><code class="docutils literal notranslate"><span class="pre">get_columns_as_sets()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mondolib.main.get_immediate_children"><code class="docutils literal notranslate"><span class="pre">get_immediate_children()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mondolib.main.get_immediate_parent"><code class="docutils literal notranslate"><span class="pre">get_immediate_parent()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mondolib.main.get_status"><code class="docutils literal notranslate"><span class="pre">get_status()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mondolib.main.relax_and_reason"><code class="docutils literal notranslate"><span class="pre">relax_and_reason()</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#mondolib.main.stringify"><code class="docutils literal notranslate"><span class="pre">stringify()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#mondolib.main.update"><code class="docutils literal notranslate"><span class="pre">update()</span></code></a></li>
 <li class="toctree-l4"><a class="reference internal" href="#mondolib.main.validate"><code class="docutils literal notranslate"><span class="pre">validate()</span></code></a></li>
 </ul>
@@ -214,13 +224,102 @@
 <h2>mondolib.cli module<a class="headerlink" href="#mondolib-cli-module" title="Link to this heading"></a></h2>
 <p id="module-mondolib.cli">Command line interface for mondolib.</p>
 </section>
+<section id="mondolib-constants-module">
+<h2>mondolib.constants module<a class="headerlink" href="#mondolib-constants-module" title="Link to this heading"></a></h2>
+<p id="module-mondolib.constants">Constants used in package.</p>
+</section>
 <section id="mondolib-main-module">
 <h2>mondolib.main module<a class="headerlink" href="#mondolib-main-module" title="Link to this heading"></a></h2>
 <p id="module-mondolib.main">Main python file.</p>
 <dl class="py function">
+<dt class="sig sig-object py" id="mondolib.main.add_obsoleted_label">
+<span class="sig-prename descclassname"><span class="pre">mondolib.main.</span></span><span class="sig-name descname"><span class="pre">add_obsoleted_label</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">all_ancestors</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obsoletion_candidates_set</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mondolib.main.add_obsoleted_label" title="Link to this definition"></a></dt>
+<dd><p>Tag all terms that are obsolete candidates.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mondolib.main.add_status_and_update_parents">
+<span class="sig-prename descclassname"><span class="pre">mondolib.main.</span></span><span class="sig-name descname"><span class="pre">add_status_and_update_parents</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">df</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">resource</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obsoletion_candidates_file</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mondolib.main.add_status_and_update_parents" title="Link to this definition"></a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p><code class="xref py py-class docutils literal notranslate"><span class="pre">DataFrame</span></code></p>
+</dd>
+</dl>
+<p>Add status based on <a href="#id1"><span class="problematic" id="id2">`</span></a>robot reason`ed output.</p>
+<p>The Dataframe that is passed here are rows present from the reasoned table
+and that are absent in the relaxed table. The 2 ancestor columns had CURIEs
+missing and thus we get them from oaklib eithout obsoletion terms inolved.</p>
+<p>Spreadsheet explaining this:
+<a class="reference external" href="https://docs.google.com/spreadsheets/d/1fbHJAbrq4gDbUX3wg92AuLyqTWKPr_IR-ew6LHuWoMc/edit#gid=0">https://docs.google.com/spreadsheets/d/1fbHJAbrq4gDbUX3wg92AuLyqTWKPr_IR-ew6LHuWoMc/edit#gid=0</a></p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mondolib.main.create_review_table">
+<span class="sig-prename descclassname"><span class="pre">mondolib.main.</span></span><span class="sig-name descname"><span class="pre">create_review_table</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">branch_id</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">branch_id_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obsoletion_candidates_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">input</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mondolib.main.create_review_table" title="Link to this definition"></a></dt>
+<dd><p>Generate review table for branch obsoletion.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>branch_id</strong> – Branch CURIE.</p></li>
+<li><p><strong>branch_id_file</strong> – TSV file listing all branch IDs.</p></li>
+<li><p><strong>obsoletion_candidates_file</strong> – TTSV listing all obsoletion candidate CURIEs</p></li>
+<li><p><strong>output_file</strong> – output filepath.</p></li>
+<li><p><strong>input</strong> – input  ontology resource (Path to local file or slug for oaklib).</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
 <dt class="sig sig-object py" id="mondolib.main.demo">
 <span class="sig-prename descclassname"><span class="pre">mondolib.main.</span></span><span class="sig-name descname"><span class="pre">demo</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#mondolib.main.demo" title="Link to this definition"></a></dt>
 <dd><p>Define API.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mondolib.main.get_columns_as_sets">
+<span class="sig-prename descclassname"><span class="pre">mondolib.main.</span></span><span class="sig-name descname"><span class="pre">get_columns_as_sets</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">row</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mondolib.main.get_columns_as_sets" title="Link to this definition"></a></dt>
+<dd><p>Return each column of a row as a set of CURIEs.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mondolib.main.get_immediate_children">
+<span class="sig-prename descclassname"><span class="pre">mondolib.main.</span></span><span class="sig-name descname"><span class="pre">get_immediate_children</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curie</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relationships</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mondolib.main.get_immediate_children" title="Link to this definition"></a></dt>
+<dd><p>Get immediate children of CURIE passed.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mondolib.main.get_immediate_parent">
+<span class="sig-prename descclassname"><span class="pre">mondolib.main.</span></span><span class="sig-name descname"><span class="pre">get_immediate_parent</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">curie</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relationships</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mondolib.main.get_immediate_parent" title="Link to this definition"></a></dt>
+<dd><p>Get immediate parents of CURIE passed.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mondolib.main.get_status">
+<span class="sig-prename descclassname"><span class="pre">mondolib.main.</span></span><span class="sig-name descname"><span class="pre">get_status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">other_parents_in_branch_list_merged</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">other_parents_not_in_branch_list_merged</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mondolib.main.get_status" title="Link to this definition"></a></dt>
+<dd><p>Set the status of obsoletion.</p>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mondolib.main.relax_and_reason">
+<span class="sig-prename descclassname"><span class="pre">mondolib.main.</span></span><span class="sig-name descname"><span class="pre">relax_and_reason</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">input</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">obsoletion_candidates_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">output_file</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">relaxed_resource</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mondolib.main.relax_and_reason" title="Link to this definition"></a></dt>
+<dd><p>Take in <a href="#id3"><span class="problematic" id="id4">`</span></a>robot relax`ed source and given <a href="#id5"><span class="problematic" id="id6">`</span></a>robot reason`ed (same source), write output.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>input</strong> – Resource filepath.</p></li>
+<li><p><strong>obsoletion_candidates_file</strong> – TSV file listign obsoletion candidate CURIEs.</p></li>
+<li><p><strong>output_file</strong> – Output file path to write results.</p></li>
+<li><p><strong>relaxed_resource</strong> – File path for <cite>robot relax</cite> output.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="mondolib.main.stringify">
+<span class="sig-prename descclassname"><span class="pre">mondolib.main.</span></span><span class="sig-name descname"><span class="pre">stringify</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">item</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">OI</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#mondolib.main.stringify" title="Link to this definition"></a></dt>
+<dd><p>Take in a list, add OBSLETION_SUFFIXes wherever appropriate and list =&gt; string.</p>
 </dd></dl>
 
 <dl class="py function">

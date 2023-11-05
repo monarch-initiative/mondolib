@@ -23,6 +23,14 @@ mondolib.cli module
    :undoc-members:
    :show-inheritance:
 
+mondolib.constants module
+-------------------------
+
+.. automodule:: mondolib.constants
+   :members:
+   :undoc-members:
+   :show-inheritance:
+
 mondolib.main module
 --------------------
 
