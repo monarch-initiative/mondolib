@@ -22,6 +22,7 @@ MAPPING_DICT_BY_SOURCE = Dict[str, str]
 
 @dataclass
 class TermValidator:
+
     """A bespoke Mondo validator."""
 
     ontology: BasicOntologyInterface = None

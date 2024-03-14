@@ -10,6 +10,7 @@ from tests import INPUT_DIR
 
 
 class TermValidatorTestCase(unittest.TestCase):
+
     """Tests for term validator."""
 
     def setUp(self) -> None:
