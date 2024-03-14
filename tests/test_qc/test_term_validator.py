@@ -1,4 +1,5 @@
 """mondolib QC test: test validator."""
+
 import unittest
 
 from linkml_runtime.dumpers import yaml_dumper
@@ -9,7 +10,6 @@ from tests import INPUT_DIR
 
 
 class TermValidatorTestCase(unittest.TestCase):
-
     """Tests for term validator."""
 
     def setUp(self) -> None:

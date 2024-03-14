@@ -1,4 +1,5 @@
 """Command line interface for mondolib."""
+
 import logging
 
 import click
