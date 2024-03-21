@@ -1,4 +1,5 @@
 """mondolib term-validator."""
+
 import logging
 import os
 import re

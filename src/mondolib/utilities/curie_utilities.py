@@ -1,4 +1,5 @@
 """mondolib CURIE utilities."""
+
 from oaklib.types import CURIE
 
 

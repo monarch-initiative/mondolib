@@ -1,4 +1,5 @@
 """mondolib QC test: test validator."""
+
 import unittest
 
 from linkml_runtime.dumpers import yaml_dumper

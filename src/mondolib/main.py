@@ -1,4 +1,5 @@
 """Main python file."""
+
 import csv
 from typing import List, Tuple
 

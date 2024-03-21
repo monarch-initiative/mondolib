@@ -1,4 +1,5 @@
 """Constants used in package."""
+
 from pathlib import Path
 
 ONT_DIR = Path(__file__).resolve().parents[1] / "ontology"
