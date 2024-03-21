@@ -34,7 +34,7 @@ If Poetry is not already installed, follow these instructions:
     - install `pipx` (as needed) following these [details](https://pipx.pypa.io/stable/installation/)
 - clone the `mondolib` repo
 - run `poetry install` from within `mondolib` directory
-Note: this repo is known to work with Python 3.9 (and may also work with 3.10 or 3.11 or 3.12) as of 13-Mar-2024.
+Note: this repo is known to work with Python 3.9 (and may also work with 3.10 or 3.11 or 3.12) as of 21-Mar-2024.
 
 
 ## Modules
